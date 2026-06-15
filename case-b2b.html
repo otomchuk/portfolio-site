@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Anti-Detect Platform — Olena Tomchuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-b2b">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Olena Tomchuk</a>
+    <div class="nav-links">
+      <a href="index.html">Cases</a>
+      <a href="about.html">About</a>
+      <a href="side-projects.html">Side projects</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>B2B anti-detect browser platform</h1>
+    <p class="lede">Redesigning a power-user desktop app for growth and retention — and building the UX process, design system, and research habit it had been missing.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Product Designer (cross-functional)</dd></div>
+      <div><dt>Team</dt><dd>PM, engineers, QA</dd></div>
+      <div><dt>Tools</dt><dd>Sketch · Abstract · Mixpanel · Miro · UserTesting</dd></div>
+    </dl>
+
+    <div class="stats">
+      <div class="stat"><div class="n">−30%</div><div class="l">password-reset support requests</div></div>
+      <div class="stat"><div class="n">~25%</div><div class="l">of team accounts adopted the switcher</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">feature workstreams, research-led, end to end</div></div>
+    </div>
+  </section>
+
+  <!-- HERO FIGURE -->
+  <section class="hero-fig">
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-hero.webp" alt="Redesigned profile workspace" data-ph="Hero shot — the redesigned profile workspace · 1600×800" onerror="phFail(this)">
+  </section>
+
+  <!-- ROLE / CONTEXT -->
+  <section class="block">
+    <h2>My role</h2>
+    <p>Beyond shipping features, I reset how design worked here: I reorganized the UX process, built a lightweight design system to hold the product together, and set up continuous research so decisions came from users rather than opinions. The work below is five of those decisions — led by the two with the clearest measured impact.</p>
+  </section>
+
+  <!-- FEATURE 1 — account switcher -->
+  <section class="exp" id="switcher">
+    <h3>Switching between accounts without logging out</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">Continuous research kept surfacing the same friction: users juggle multiple accounts — freelancers across clients, team leads checking their staff — and switching meant logging out and re-entering credentials every time.</div></div>
+      <div class="step"><div class="k">Approach</div><div class="v">An account switcher that holds several logged-in accounts at once: switch instantly, remove one from the list, add another, or create a new account — all without breaking focus.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-switcher.webp" alt="Account switcher — switch, add, remove, create" data-ph="Account switcher — switch, add, remove, create" data-style="aspect-ratio:16/8" onerror="phFail(this)">
+    <div class="result">
+      <span class="tag">Result</span>
+      <span class="val">Within months, <b>~25% of team accounts</b> were using the switcher; 37% of all users had two or more accounts active on their machine.</span>
+    </div>
+  </section>
+
+  <!-- FEATURE 2 — password reset -->
+  <section class="exp" id="reset">
+    <h3>A reset flow that makes the stakes impossible to miss</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">The password is the encryption key. Resetting it kept the subscription alive but left the user's data unreadable — like keeping your account but losing every photo in it. Users reset reflexively, lost their data, then flooded support trying to recover it.</div></div>
+      <div class="step"><div class="k">Insight</div><div class="v">Discovery into the journey and the emotions around it showed people reset on autopilot, only realizing the cost afterward — and often remembering their real password once they paused.</div></div>
+      <div class="step"><div class="k">Approach</div><div class="v">I rebuilt the flow visually and logically, adding a deliberate friction step: to proceed, the user types the phrase “Corrupt my data.” The friction is the point — it forces a pause and makes the consequence concrete.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-reset.webp" alt="Reset flow — the Corrupt my data confirmation step" data-ph="Reset flow — the “Corrupt my data” confirmation step" data-style="aspect-ratio:16/7" onerror="phFail(this)">
+    <div class="result">
+      <span class="tag">Result</span>
+      <span class="val">Password-reset requests dropped <b>~30%</b> — fewer destroyed accounts, less support load.</span>
+    </div>
+  </section>
+
+  <!-- FEATURE 3 — quick edit sidebar -->
+  <section class="exp" id="sidebar">
+    <h3>Quick-edit sidebar</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">Most profile settings stay fixed for a profile's life, but a few change constantly — and editing them meant opening the full profile and leaving the list you were working in.</div></div>
+      <div class="step"><div class="k">Approach</div><div class="v">An inline sidebar to review and edit the frequently-changed settings in place, so users never lose their spot in the profile list. Each state was specified separately for handoff.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-quick-edit.webp" alt="Quick-edit sidebar — editing in place" data-ph="Quick-edit sidebar — editing in place from the profile list" data-style="aspect-ratio:16/8" onerror="phFail(this)">
+  </section>
+
+  <!-- FEATURE 4 — dark mode -->
+  <section class="exp" id="dark">
+    <h3>Designing and shipping dark mode</h3>
+    <p>A dark theme for the desktop app that stayed accessible and consistent with the existing light design. The real work was in the constraints: applying contrast and accessibility principles properly, and reconciling the gaps between what design specified and what the code actually did. The result gave users a comfortable experience in low-light environments.</p>
+    <p>
+    </p>
+
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-dark-mode.webp" alt="Dark mode — accessible and consistent with the light theme" data-ph="Dark mode — accessible, consistent with the light theme" data-style="aspect-ratio:16/6" onerror="phFail(this)">
+  </section>
+
+  <!-- FEATURE 5 — activation -->
+  <section class="exp" id="activation">
+    <h3>Welcome page for activation</h3>
+    <p>A focused redesign of the Welcome page aimed at lifting the registered-to-paid conversion ratio — guiding new users toward the first action that demonstrates the product's value.</p>
+    <p>
+      </p>
+    <img class="shot" loading="lazy" decoding="async" src="images/b2b-welcome.webp" alt="Welcome page — registered-to-paid activation" data-ph="Welcome page — registered-to-paid activation" data-style="aspect-ratio:16/6" onerror="phFail(this)">
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="reflect">
+    <h2>What carried over</h2>
+    <p>The two results that mattered most — the switcher's adoption and the 30% drop in resets — both came from research, not from a redesign brief. The durable win wasn't any single screen; it was leaving behind a design system and a continuous-research habit the team kept using after I'd moved on.</p>
+  </section>
+
+</main>
+
+<section class="wrap next-nav">
+  <div class="next">
+    <span class="lbl">Next case</span>
+    <a class="proj" href="case-billing.html">Billing portal for a SaaS platform &rarr;</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot">
+    <h3>Want to work together?</h3>
+    <p class="sub">Open to senior product design roles. Get in touch.</p>
+    <div class="foot-meta">
+      <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+        Email
+      </a>
+      <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function phFail(img){var d=document.createElement("div");d.className="ph";if(img.dataset.style)d.setAttribute("style",img.dataset.style);d.textContent=img.dataset.ph||"";img.replaceWith(d);}
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EdTech SaaS Platform — Olena Tomchuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-edtech">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Olena Tomchuk</a>
+    <div class="nav-links">
+      <a href="index.html">Cases</a>
+      <a href="about.html">About</a>
+      <a href="side-projects.html">Side projects</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>EdTech SaaS platform</h1>
+    <p class="lede">Helping teachers organize thousands of activities — and turning small interface decisions into measurable retention.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Product Designer, UX Research, PM</dd></div>
+      <div><dt>Team</dt><dd>Designer + engineers</dd></div>
+      <div><dt>Tools</dt><dd>Figma · Userbrain · A/B</dd></div>
+    </dl>
+
+    <div class="stats">
+      <div class="stat"><div class="n">+27% </div><div class="l">Standard to Pro upgrades </div></div>
+      <div class="stat"><div class="n">-6.0%</div><div class="l">churn (96% confidence)</div></div>
+      <div class="stat"><div class="n">~50%</div><div class="l">adoption of the new feature</div></div>
+
+    </div>
+  </section>
+
+
+  <!-- PROBLEM -->
+  <section class="block">
+    <h2>The problem</h2>
+    <div class="problem-grid">
+      <p>Teachers manage large libraries of activities, and they couldn't find anything fast. Folders existed, but offered no way to organize them visually — so the workspace turned into an undifferentiated list the moment it grew.</p>
+      <div class="pull">
+        <div class="q">58 of 253 comments asked for colour-coding.</div>
+        <div class="c">Feedback on the “My Activity” page</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT 1 -->
+  <section class="exp" id="exp1">
+    <div class="exp-head">
+      <span class="badge b-ship">Shipped</span>
+    </div>
+    <h3>Colour-coded folders</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">Users couldn't locate folders quickly once their workspace grew past a handful.</div></div>
+      <div class="step"><div class="k">Hypothesis</div><div class="v">Teachers already colour-code printed materials in class. Letting them tag folders by colour should speed up retrieval and make the workspace feel like theirs.</div></div>
+      <div class="step"><div class="k">Design</div><div class="v">Colour tagging across web and mobile, shipped behind a flag, with a defined success bar set before launch: ≥10% of new folders given a non-default colour.</div></div>
+    </div>
+
+    <!-- clickable before/after -->
+    <div class="toggle" role="tablist" aria-label="Before and after">
+      <button role="tab" aria-selected="true" data-target="a1-before">Before</button>
+      <button role="tab" aria-selected="false" data-target="a1-after">After</button>
+    </div>
+    <div class="panel on" id="a1-before"><img class="shot" loading="lazy" decoding="async" src="images/edtech-folders-before.webp" alt="Folder list before — plain, uncategorized" data-ph="Folder list — before · plain, uncategorized" onerror="phFail(this)"></div>
+    <div class="panel" id="a1-after"><img class="shot" loading="lazy" decoding="async" src="images/edtech-folders-after.webp" alt="Folder list after — colour-tagged and scannable" data-ph="Folder list — after · colour-tagged &amp; scannable" onerror="phFail(this)"></div>
+
+    <div class="result">
+      <span class="tag">Result</span>
+      <span class="val"><b>-6% churn</b> · 96% confidence · ~50% adoption → shipped to all users</span>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT 2 -->
+  <section class="exp" id="exp2">
+    <div class="exp-head">
+      <span class="badge b-iter">Rejected → iterated → shipped</span>
+    </div>
+    <h3>Making the question visible (Airplane game)</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">In usability testing, 3 of 5 users never noticed the question at the bottom of the screen — especially on mobile, or when the question used an image.</div></div>
+      <div class="step"><div class="k">First try</div><div class="v">Show the question full-screen, then animate it into place. It worked for Maze Chase, so we tested it here.</div></div>
+      <div class="step"><div class="k">Design</div><div class="v">After the A/B test failed, the second iteration moved the question to a larger, persistent area at the top instead.</div></div>
+    </div>
+    <div class="twin triple">
+      <img class="shot" loading="lazy" decoding="async" src="images/edtech-airplane-a.webp" alt="Airplane game variant A — original" data-ph="Variant A — original" onerror="phFail(this)">
+      <img class="shot" loading="lazy" decoding="async" src="images/edtech-airplane-b.webp" alt="Airplane game variant B — full-screen overlay" data-ph="Variant B — full-screen overlay" onerror="phFail(this)">
+      <img class="shot" loading="lazy" decoding="async" src="images/edtech-airplane-c.webp" alt="Airplane game variant C — larger question on top" data-ph="Variant C — larger question on top" onerror="phFail(this)">
+    </div>
+    <div class="result neutral">
+      <span class="tag">Result</span>
+      <span class="val">Overlay broke flow in a continuous game → rejected. The follow-up (larger question on top) <b>passed and shipped</b>.</span>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT 3 -->
+  <section class="exp" id="exp3">
+    <div class="exp-head">
+      <span class="badge b-rej">Rejected</span>
+    </div>
+    <h3>Simplifying game speed (10 → 5)</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">Ten speed steps created choice overload — users couldn't land on the right setting, and feedback said even “1” felt too fast.</div></div>
+      <div class="step"><div class="k">Hypothesis</div><div class="v">Collapsing ten options into five would ease the decision and lift creation metrics on speed-dependent templates.</div></div>
+      <div class="step"><div class="k">Design</div><div class="v">Mapped the existing ten states onto five and tested across three templates.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/edtech-speed.webp" alt="Speed control — 10-step vs 5-step" data-ph="Speed control — 10-step vs 5-step" data-style="aspect-ratio:16/6" onerror="phFail(this)">
+    <div class="result neutral">
+      <span class="tag">Result</span>
+      <span class="val">No experiment reached confidence; data leaned negative → rejected. We moved on rather than force another round.</span>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT 4 -->
+  <section class="exp" id="exp4">
+    <div class="exp-head">
+      <span class="badge b-kept">Kept live</span>
+    </div>
+    <h3>Upgrade prompts that explain themselves</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">Generic “subscribe to use this feature” modals never said what the locked feature actually did, so free users saw no reason to upgrade.</div></div>
+      <div class="step"><div class="k">Design</div><div class="v">Custom copy and imagery per feature, behind a flag, with a ref parameter to track which feature triggered each prompt.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/edtech-modal.webp" alt="Generic modal versus feature-specific modal" data-ph="Generic modal → feature-specific modal" data-style="aspect-ratio:16/6" onerror="phFail(this)">
+    <div class="result neutral">
+      <span class="tag">Result</span>
+      <span class="val">Small positive engagement, no harm → kept live as a base for further upgrade work.</span>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT 5 -->
+  <section class="exp" id="exp5">
+    <div class="exp-head">
+      <span class="badge b-kept">Kept live</span>
+    </div>
+    <h3>Social proof in Community search</h3>
+    <div class="steps">
+      <div class="step"><div class="k">Problem</div><div class="v">The shared Community library gave users no signal of which resources others actually valued.</div></div>
+      <div class="step"><div class="k">Hypothesis</div><div class="v">Surfacing like-counts on home, template, and search pages would build trust and nudge engagement.</div></div>
+      <div class="step"><div class="k">Design</div><div class="v">Lightweight like-count display for both registered and guest users, behind a flag.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/edtech-social-proof.webp" alt="Community search with like-counts" data-ph="Community search with like-counts" data-style="aspect-ratio:16/6" onerror="phFail(this)">
+    <div class="result neutral">
+      <span class="tag">Result</span>
+      <span class="val">Positive engagement signal, low risk → kept live.</span>
+    </div>
+  </section>
+
+
+  <!-- REFLECTION -->
+  <section class="reflect">
+    <h2>What I'd do next</h2>
+    <p>The folder result confirmed a thesis worth repeating: small, ownership-giving configuration changes move retention more reliably than big features. The next bets follow that pattern.</p>
+    <p>I'd also test minor things earlier — copy, image sizing, non-native-speaker comprehension — rather than treating them as too small to validate. Two of the wins here started as “too small to bother.”</p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<section class="wrap next-nav">
+  <div class="next">
+    <span class="lbl">Next case</span>
+    <a class="proj" href="case-b2b.html">B2B anti-detect platform &rarr;</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot">
+    <h3>Want to work together?</h3>
+    <p class="sub">Open to senior product design roles. Get in touch.</p>
+    <div class="foot-meta">
+      <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+        Email
+      </a>
+      <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Before / After toggle
+  document.querySelectorAll('.toggle').forEach(function(group){
+    var btns = group.querySelectorAll('button');
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btns.forEach(function(b){ b.setAttribute('aria-selected', b === btn); });
+        var section = group.closest('.exp');
+        section.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('on'); });
+        section.querySelector('#' + btn.dataset.target).classList.add('on');
+      });
+    });
+  });
+</script>
+<script>
+function phFail(img){var d=document.createElement("div");d.className="ph";if(img.dataset.style)d.setAttribute("style",img.dataset.style);d.textContent=img.dataset.ph||"";img.replaceWith(d);}
+</script>
+</body>
+</html>

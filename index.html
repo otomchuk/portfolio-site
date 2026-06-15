@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olena Tomchuk — Senior Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-home">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Olena Tomchuk</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Cases</a>
+      <a href="about.html">About</a>
+      <a href="side-projects.html">Side projects</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>I design SaaS products and judge them by what they move.</h1>
+    <p class="lede">Eight years across B2B and B2C — research-led, end to end, and validated by what actually ships.</p>
+  </section>
+
+  <!-- FEATURED CASE -->
+  <a class="featured" href="case-edtech.html" aria-label="Read the EdTech case study">
+    <img class="shot" loading="lazy" decoding="async" src="images/edtech-hero.webp" alt="EdTech SaaS platform thumbnail" data-ph="EdTech — featured case thumbnail · 1200×900" onerror="phFail(this)">
+    <div>
+      <h2>EdTech SaaS platform</h2>
+      <div class="tag">Product design · UX research · PM</div>
+      <p class="hook">Small, ownership-giving design changes — like letting teachers colour-code their folders — turned into measurable retention, proven with A/B experiments.</p>
+      <div class="metrics">
+        <div><div class="n">+27%</div><div class="l"> Standard to Pro upgrades</div></div>
+        <div><div class="n">−6%</div><div class="l">churn</div></div>
+      </div>
+    </div>
+  </a>
+
+  <!-- SELECTED WORK -->
+  <section class="case-grid">
+    <a class="case-card" href="case-b2b.html">
+      <img class="shot" loading="lazy" decoding="async" src="images/b2b-thumb.webp" alt="B2B anti-detect platform thumbnail" data-ph="B2B anti-detect platform · 16:10" onerror="phFail(this)">
+      <h3>B2B anti-detect platform</h3>
+      <div class="tag">Product design</div>
+      <p class="hook">Cut password-reset load ~30%, shipped the account switcher, and built the design system and research process behind them.</p>
+    </a>
+    <a class="case-card" href="case-billing.html">
+      <img class="shot" loading="lazy" decoding="async" src="images/billing-thumb.webp" alt="Billing portal thumbnail" data-ph="Billing portal · 16:10" onerror="phFail(this)">
+      <h3>Billing portal for a SaaS platform</h3>
+      <div class="tag">Web app design</div>
+      <p class="hook">Replaced a third-party billing tool with a custom portal — one login, and the first-party data the business never had.</p>
+    </a>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <div class="mark">“</div>
+    <p>She really understands the value of continuous discovery — an expert at user interviews and usability tests, and a great workshop facilitator. Always puts the customer first.</p>
+    <div class="by">Kamilla Boross · Product Manager</div>
+  </section>
+
+  <!-- ABOUT + SIDE PROJECTS -->
+  <section class="more">
+    <a href="about.html">
+      <div class="k">About</div>
+      <div class="t">How I work, and the path here</div>
+      <p>Eight years across SaaS, three principles behind the work, and where design meets product strategy.</p>
+    </a>
+    <a href="side-projects.html">
+      <div class="k">Beyond client work</div>
+      <div class="t">Side projects</div>
+      <p>A podcast, a Chrome extension, and vzir.shop — what I build when no one's briefing me.</p>
+    </a>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="foot">
+    <h3>Want to work together?</h3>
+    <p class="sub">Open to senior product design roles. Get in touch.</p>
+    <div class="foot-meta">
+      <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+        Email
+      </a>
+      <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function phFail(img){var d=document.createElement("div");d.className="ph";if(img.dataset.style)d.setAttribute("style",img.dataset.style);d.textContent=img.dataset.ph||"";img.replaceWith(d);}
+</script>
+</body>
+</html>

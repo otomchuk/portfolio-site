@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side projects — Olena Tomchuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-side">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Olena Tomchuk</a>
+    <div class="nav-links">
+      <a href="index.html">Cases</a>
+      <a href="about.html">About</a>
+      <a href="side-projects.html" class="active">Side projects</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>What I build when no one's briefing me.</h1>
+    <p class="lede">Three things I shipped on my own time — a podcast, a Chrome extension, and a small online shop. Each one is me playing every role at once: research, design, build, launch.</p>
+  </section>
+
+  <!-- ===================== CYCLE CALENDAR ===================== -->
+  <section class="proj" id="cycle">
+    <h2>Cycle Calendar</h2>
+    <p class="lede">A colour-coded menstrual-phase calendar that lives right inside Google Calendar — personalised to your own rhythm, built end to end with Claude.</p>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Free Chrome extension</dd></div>
+      <div><dt>Tools</dt><dd>Claude · Google Calendar API · GitHub</dd></div>
+      <div><dt>Live</dt><dd><a href="https://ccycle.olenatomchuk.com/" target="_blank" rel="noopener">ccycle.olenatomchuk.com&nbsp;↗</a></dd></div>
+    </dl>
+
+    <div class="body">
+      <p>I plan both my work and personal life in Google Calendar — but women's energy isn't flat across a month. My cycle data lived in a separate period-tracking app, walled off from the one place I actually plan. So I'd consistently overestimate what a given week could hold, then end it either exhausted or frustrated that I hadn't finished what I'd scheduled.</p>
+      <p>Cycle Calendar closes that gap. It takes three numbers — last period date, period length, cycle length — and generates a dedicated <b>“My Cycle”</b> calendar with every phase laid out in colour, right alongside the meetings and plans I already keep there.</p>
+    </div>
+
+    <h3>Existing tools didn't fit</h3>
+    <div class="body">
+      <p>I tried the alternatives first — Calessa, “Add your period to Calendar,” and “Period Phase Calendar” — but each one demanded an account, covered only the period itself, or simply didn't work.</p>
+    </div>
+
+    <h3>What I chose to build — and not</h3>
+    <div class="frame">
+      <div class="card hyp">
+        <div class="lbl">In scope</div>
+        <p>A simple, functional Chrome extension · no registration · English and Ukrainian · events generated from the data you enter · a <b>separate</b> calendar you can hide or delete in one click.</p>
+      </div>
+      <div class="card">
+        <div class="lbl">Deliberately left out</div>
+        <p>Symptom tracking · mood logging · notifications and reminders · native iOS/Android apps · account creation and cloud sync. Staying out of these kept it private and shippable.</p>
+      </div>
+    </div>
+
+    <h3>Built with Claude</h3>
+    <div class="body"><p>This was a one-person project, and Claude was the team. I used it across the whole arc:</p></div>
+    <ul class="feat">
+      <li>PRD drafting for the system design</li>
+      <li>Building the solution itself</li>
+      <li>Privacy Policy and Terms of Service</li>
+      <li>Bilingual copywriting for the phase descriptions</li>
+      <li>Deploy assistance</li>
+      <li>Meeting the Chrome Web Store requirements</li>
+      <li>Landing-page content</li>
+      <li>GitHub and domain to ship on</li>
+    </ul>
+
+    <!-- CYCLE CAROUSEL -->
+    <div class="carousel wide" aria-roledescription="carousel" aria-label="Cycle Calendar screens">
+      <div class="carousel-track" id="cycle-track" tabindex="0">
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-1.webp" alt="Cycle Calendar — colour-coded phases in Google Calendar"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/cycle-1.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-2.webp" alt="Cycle Calendar — phase event detail"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/cycle-2.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-3.webp" alt="Cycle Calendar — extension and setup"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/cycle-3.webp</div>
+        </div>
+      </div>
+      <div class="carousel-foot">
+        <div class="carousel-nav">
+          <button type="button" data-dir="-1" aria-label="Previous image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-dir="1" aria-label="Next image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">Designed as an informational tool — not for medical decisions, diagnosis, or contraception. That boundary is stated plainly in the product itself.</p>
+  </section>
+
+  <!-- ===================== PODCAST ===================== -->
+  <section class="proj" id="podcast">
+    <h2>Producing a podcast</h2>
+    <p class="lede">An interview show I built from zero during the pandemic — talking to interesting people about their education, careers, and the things they make on the side.</p>
+
+    <dl class="meta">
+      <div><dt>Tools</dt><dd>Notion · Zencastr · Podbean · Figma · SongRender</dd></div>
+      <div><dt>Listen</dt><dd><a href="https://open.spotify.com/show/33qQZDS8NtZJjhkgulCINl?si=115b0f453b8d4ed1" target="_blank" rel="noopener">On Spotify&nbsp;↗</a></dd></div>
+    </dl>
+
+    <div class="body">
+      <p>After moving to Estonia and starting a blog, I wanted a sharper way to grow an audience — so I treated a podcast like a product. I ran market research on Ukrainian shows for women interested in career and self-development, surveyed my target audience (30% already listened to podcasts), and compared equipment, remote-recording services, and editing software before recording a single word.</p>
+      <p>Then I designed the assembly line. I mapped an <b>eight-step process</b> that took each episode from zero to a finished, ready-to-listen interview — research, outreach, recording, editing, artwork, audiograms, publishing, promotion. Distribution leaned on podcast pitches, a news-portal feature, my Telegram channel, and guests resharing to their own audiences.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">10</div><div class="l">episodes shipped</div></div>
+      <div class="stat"><div class="n">~600</div><div class="l">minutes of content</div></div>
+      <div class="stat"><div class="n">1,400+</div><div class="l">downloads</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">listening platforms</div></div>
+    </div>
+
+    <h3>The brand I built around it</h3>
+    <div class="body"><p>I designed the show's whole visual identity — cover art, episode templates, audiograms, and promo posts — so every episode shipped looking like part of one set. It still holds up, so it's earned a spot here.</p></div>
+
+    <!-- PODCAST CAROUSEL — mixed formats, uniform height -->
+    <div class="carousel media" aria-roledescription="carousel" aria-label="Podcast brand visuals">
+      <div class="carousel-track" id="podcast-track" tabindex="0">
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-1.webp" alt="Podcast brand visual 1"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-1.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-2.webp" alt="Podcast brand visual 2"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-2.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-3.webp" alt="Podcast brand visual 3"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-3.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-4.webp" alt="Podcast brand visual 4"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-4.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-5.webp" alt="Podcast brand visual 5"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-5.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-6.webp" alt="Podcast brand visual 6"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-6.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-7.webp" alt="Podcast brand visual 7"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/podcast-7.webp</div>
+        </div>
+      </div>
+      <div class="carousel-foot">
+        <div class="carousel-nav">
+          <button type="button" data-dir="-1" aria-label="Previous image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-dir="1" aria-label="Next image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <p><b>What I'd do differently:</b> shorter formats, a co-host or editor to share the load, and partnerships earlier. The lasting wins were softer — much sharper interviewing skills, and the confidence that comes from shipping something end to end, alone.</p>
+    </div>
+  </section>
+
+  <!-- ===================== VZIR.SHOP ===================== -->
+  <section class="proj" id="vzir">
+    <h2>Vzir.shop</h2>
+    <p class="lede">A hobby that turned into a storefront. I took up block printing, got curious whether anyone would buy it — and built the shop to find out.</p>
+
+    <dl class="meta">
+      <div><dt>Tools</dt><dd>Claude Code · Nano&nbsp;Banana (Gemini)</dd></div>
+      <div><dt>Live</dt><dd><a href="https://vzir.shop" target="_blank" rel="noopener">vzir.shop&nbsp;↗</a></dd></div>
+    </dl>
+
+    <div class="body">
+      <p>I pursued block printing as a new hobby, and then got interested in whether somebody would actually be willing to buy it. More recently I used <b>Claude Code</b> to build and ship <a href="https://vzir.shop" target="_blank" rel="noopener">vzir.shop</a>, an e-commerce site for the small textile brand — going from idea to a live storefront myself.</p>
+      <p>For the catalogue, I used Claude and Gemini's <b>Nano Banana</b> model to produce high-quality product images — clean, consistent shots of the printed pieces, also used for an <a href="https://www.instagram.com/p/DW6BYymDYXQ/?img_index=1" target="_blank" rel="noopener">Instagram launch</a>. The carousel below is a selection of those AI-generated images.</p>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel" aria-roledescription="carousel" aria-label="Vzir.shop AI-generated product images">
+      <div class="carousel-track" id="vzir-track" tabindex="0">
+       
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-1.webp" alt="Vzir block-printed textile — image 1"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-1.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-2.webp" alt="Vzir block-printed textile — image 2"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-2.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-3.webp" alt="Vzir block-printed textile — image 3"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-3.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-4.webp" alt="Vzir block-printed textile — image 4"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-4.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-5.webp" alt="Vzir block-printed textile — image 5"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-5.webp</div>
+        </div>
+        <div class="slide">
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-6.webp" alt="Vzir block-printed textile — image 6"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="ph" style="display:none">images/vzir-6.webp</div>
+        </div>
+      </div>
+      <div class="carousel-foot">
+        <div class="carousel-nav">
+          <button type="button" data-dir="-1" aria-label="Previous image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-dir="1" aria-label="Next image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="foot">
+    <h3>Want to work together?</h3>
+    <p class="sub">Open to senior product design roles. Get in touch.</p>
+    <div class="foot-meta">
+      <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+        Email
+      </a>
+      <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button" aria-label="Close">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  // Click any project image to open it full-size.
+  (function(){
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    function open(src, alt){ img.src = src; img.alt = alt || ''; box.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function close(){ box.classList.remove('open'); img.src = ''; document.body.style.overflow = ''; }
+    document.querySelectorAll('.proj img.shot').forEach(function(el){
+      el.addEventListener('click', function(){ open(el.currentSrc || el.src, el.alt); });
+    });
+    box.addEventListener('click', function(e){ if(e.target === box || e.target.closest('.lightbox-close')) close(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  })();
+
+  // Carousels — arrow buttons scroll their own track by one slide.
+  document.querySelectorAll('.carousel').forEach(function(carousel){
+    var track = carousel.querySelector('.carousel-track');
+    if(!track) return;
+    function step(){
+      var slide = track.querySelector('.slide');
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 14) || 14;
+      return slide ? slide.getBoundingClientRect().width + gap : track.clientWidth;
+    }
+    carousel.querySelectorAll('.carousel-nav button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        track.scrollBy({ left: step() * parseInt(btn.dataset.dir, 10), behavior: 'smooth' });
+      });
+    });
+  });
+</script>
+</body>
+</html>
