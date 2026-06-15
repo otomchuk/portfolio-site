@@ -28,7 +28,7 @@ a{color:inherit}
 /* ---- nav ---- */
 .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 .nav-in{max-width:var(--maxw);margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em;text-decoration:none}
+.brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .nav-links{display:flex;gap:26px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .nav-links a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink);border-color:var(--accent)}
@@ -208,6 +208,11 @@ footer{border-top:1px solid var(--border);margin-top:30px}
   .row{grid-template-columns:1fr;gap:4px}
   .row .co{text-align:left}
   .nav-links{gap:18px}
+}
+@media (max-width:560px){
+  .nav-in{flex-direction:column;align-items:flex-start;gap:12px;padding:14px 24px}
+  .nav-links{gap:22px}
+  .nav-links a{white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
