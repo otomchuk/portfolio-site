@@ -47,6 +47,12 @@
   .p-ai .opt .opt-body > p{font-size:16px;max-width:62ch}
   .p-ai .opt .opt-body .steps{margin-top:16px;margin-bottom:0}
   .p-ai .opt .opt-body .shot{margin-top:22px}
+  @media (max-width:560px){
+    .p-ai .opts .opt summary{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"badge caret" "title caret";align-items:center;gap:8px 14px}
+    .p-ai .opts .opt summary .badge{grid-area:badge;justify-self:start}
+    .p-ai .opts .opt summary .opt-title{grid-area:title;min-width:0}
+    .p-ai .opts .opt summary .caret{grid-area:caret;align-self:center;justify-self:end}
+  }
 </style>
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim');</script>
 <script src="app.js" defer></script>
