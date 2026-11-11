@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Content Assistance in the Editor — Olena Tomchuk</title>
+<meta name="description" content="Bringing AI into the moment teachers are already typing: research, four directions, and the trade-offs behind “Generate similar” in the editor.">
+<link rel="canonical" href="https://olenatomchuk.com/case-ai.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Olena Tomchuk">
+<meta property="og:url" content="https://olenatomchuk.com/case-ai.html">
+<meta property="og:title" content="AI Content Assistance in the Editor — Olena Tomchuk">
+<meta property="og:description" content="Bringing AI into the moment teachers are already typing: research, four directions, and the trade-offs behind “Generate similar” in the editor.">
+<meta property="og:image" content="https://olenatomchuk.com/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://olenatomchuk.com/images/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* page-only additions; move into styles.css if you reuse them */
+  .p-ai .cap{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--faint);margin-top:8px}
+  .p-ai .twin figure{margin:0}
+  .p-ai .exp .shot{margin-top:22px}
+  .p-ai .exp .pros{margin-top:16px}
+  .p-ai .phase .feat{margin-top:22px}
+  .p-ai .phase .steps{margin-top:22px}
+  .p-ai .stats .l{max-width:26ch}
+  .p-ai .hero .jump{margin-top:28px}
+  .p-ai #action .feat a{color:var(--accent);text-decoration:none}
+  .p-ai #action .feat a:hover{text-decoration:underline}
+  .p-ai .band .eyebrow{margin-bottom:14px}
+  .p-ai .opts{margin-top:26px;border-bottom:1px solid var(--border)}
+  .p-ai .opt{border-top:1px solid var(--border)}
+  .p-ai .opt summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:20px 0;flex-wrap:wrap}
+  .p-ai .opt summary::-webkit-details-marker{display:none}
+  .p-ai .opt .opt-title{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.015em;flex:1;min-width:200px;transition:color .15s}
+  .p-ai .opt summary:hover .opt-title{color:var(--accent)}
+  .p-ai .opt .badge{min-width:116px;text-align:center}
+  .p-ai .opt .caret{font-size:12px;color:var(--muted);transition:transform .2s ease}
+  .p-ai .opt[open] .caret{transform:rotate(180deg)}
+  .p-ai .opt .opt-body{padding:0 0 28px}
+  .p-ai .opt .opt-body > p{font-size:16px;max-width:62ch}
+  .p-ai .opt .opt-body .steps{margin-top:16px;margin-bottom:0}
+  .p-ai .opt .opt-body .shot{margin-top:22px}
+</style>
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim');</script>
+<script src="app.js" defer></script>
+</head>
+<body class="p-ai">
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Olena Tomchuk</a>
+    <div class="nav-links">
+      <a href="index.html">Cases</a>
+      <a href="about.html">About</a>
+      <a href="side-projects.html">Side projects 🧩</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+  
+    <h1>AI that helps while you type</h1>
+    <p class="lede">Moving AI from a separate “generate an activity” modal into the editor itself, where teachers run out of ideas halfway through a quiz.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Product Manager: research, shaping, UX, QA</dd></div>
+      <div><dt>Team</dt><dd>UX researcher, 3 engineers, analyst</dd></div>
+      <div><dt>Tools</dt><dd>Figma · v0 · Userbrain </dd></div>
+    </dl>
+
+    <div class="stats">
+      <div class="stat"><div class="n">+2.5%</div><div class="l">creations in the A/B test</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">usability studies with 24 respondents</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">directions weighed before we committed to one</div></div>
+    </div>
+
+  </section>
+
+  <!-- HERO FIGURE -->
+  <section class="hero-fig">
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-hero.webp" alt="The Wordwall editor with a Generate similar button next to Add an item, on desktop and mobile" data-ph="Hero — Generate similar in the editor, desktop + mobile" onerror="phFail(this)">
+  </section>
+
+  <!-- ================= S · SITUATION ================= -->
+  <section class="phase" id="situation">
+
+    <h3>AI was already in the product, just not where the work happened</h3>
+    <div class="problem-grid">
+      <div>
+        <p>There was already a first-generation AI feature: a “Generate content using AI” button that opens a modal, takes a prompt and drafts a whole activity. It works for teachers who start from a blank page.</p>
+        <p>Most teachers don't, though. They arrive with a topic and a few questions they want to ask their class. Quiz was the most-created template in both 2023 and 2024, but it had the third-lowest editor completion rate (52.61% against 60.88% on average). The effort sits in the middle of an activity, not at the start.</p>
+      </div>
+      <div class="pull">
+        <div class="q">“I don't even know if I'm gonna remember eight more.”</div>
+        <div class="c">Usability study participant, two cards into a 10-item set, before leaving to search Google</div>
+      </div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-context.webp" alt="The existing Generate content using AI button at the top of the editor, and the new Generate similar button below the items" data-ph="Existing AI entry point vs. where people actually work" onerror="phFail(this)">
+  
+
+  
+    <div class="steps">
+      <div class="step"><div class="k">Templates</div><div class="v">Each template has a different content shape. A Quiz item is a question with answers and correct/incorrect flags, a Match up item is a keyword–definition pair, and Speaking cards are a single list. One feature had to produce the right shape for each.</div></div>
+      <div class="step"><div class="k">Users</div><div class="v">There were teachers starting from scratch and teachers mid-way through their own content, and many weren't creating in English, because product is available in multiple languages.</div></div>
+      <div class="step"><div class="k">Business</div><div class="v">The feature had to justify AI latency and cost, work both for free and paid users, and be measurable in an A/B test, which meant new analytics events and goals.</div></div>
+    </div>
+  </section>
+
+  <!-- ================= T · TASK ================= -->
+  <section class="phase" id="task">
+
+    <h3>Find out where AI should help next, and ship the first version</h3>
+    <p>The company goal for the quarter was easier creation. My job was to work out which kind of in-editor AI help would move it, get the team to agree on a direction, and take that direction from research to an A/B test.</p>
+    <div class="frame">
+      <div class="card">
+        <div class="lbl">Problem</div>
+        <p>Larger activities are effortful. Quiz is our most-created template, yet only about half of the people who open its editor finish an activity. Teachers start with a few questions in mind and stall when they need ten.</p>
+      </div>
+      <div class="card hyp">
+        <div class="lbl">Hypothesis</div>
+        <p>If AI offers more content in the same format as what the teacher has already typed, right where they are working, more teachers will finish large activities, and finishing more activities leads to more subscriptions.</p>
+      </div>
+    </div>
+    <div class="steps" style="margin-top:26px">
+      <div class="step"><div class="k">I owned</div><div class="v">Research and prototypes, the solution cards and trade-off discussions, interaction design and states, the measurement spec, and testing in other languages before release.</div></div>
+      <div class="step"><div class="k">With others</div><div class="v">The direction was agreed with the co-founder and head of design. Engineers built it and shaped the technical approach. Our UX researcher ran design QA and the final usability round.</div></div>
+      <div class="step"><div class="k">Success</div><div class="v">A positive A/B result on net subscriptions and creations, with AI-assisted creations measured separately.</div></div>
+    </div>
+  </section>
+
+  <!-- ================= A · ACTION ================= -->
+  <section class="phase" id="action">
+
+    <h3>Five steps from research to release</h3>
+    <ul class="feat one">
+      <li><a href="#research"><b>1. Research:</b></a> watching teachers create, on our prototypes and on other tools</li>
+      <li><a href="#options"><b>2. Options:</b></a> four directions, and why we picked one</li>
+      <li><a href="#shaping"><b>3. Shaping:</b></a> the smaller trade-offs that made it work</li>
+      <li><a href="#measure"><b>4. Measurement:</b></a> designing how we'd know</li>
+      <li><a href="#language"><b>5. Testing in other languages:</b></a> what broke outside English</li>
+    </ul>
+  </section>
+
+  <!-- A1 RESEARCH -->
+  <section class="phase" id="research">
+
+    <h3>Watching teachers create, on our prototypes and on other tools</h3>
+    <p>I built clickable, coded prototypes of an in-editor “generate more” for Match up and Quiz in v0, so participants could actually type their own content instead of clicking through static frames. I tested them on Userbrain, then ran three more studies watching teachers build a 10-question activity in four other popular creation tools, each with its own take on AI help. The point wasn't to judge those products. It was to see which patterns teachers actually used when no one was explaining them.</p>
+    <p>What changed our thinking:</p>
+    <ul class="feat one">
+      <li><b>Help shown in context gets used.</b> When a tool offered images right next to the question being typed, participants noticed them and picked one.</li>
+      <li><b>A big AI modal pulls people out of their own work.</b> Once participants entered a full-screen AI flow, they stopped creating manually altogether.</li>
+      <li><b>Hidden options stay hidden.</b> Nobody used an “add similar questions” option that sat inside a menu, and only 1 of 3 people found a question-count setting in another AI flow.</li>
+      <li><b>Always-on suggestions add noise.</b> Autocomplete that didn't take into account what people had already typed was mostly ignored, and only 2 of 6 participants produced good content with it.</li>
+      <li><b>Correct answers are forgotten unless the system insists.</b> 3 of 6 people in our prototype never changed correct/incorrect status, and in another tool everyone who created manually hit an error on save.</li>
+      <li><b>When ideas run out, people leave.</b> Several participants opened Google mid-task to find more items, then typed them in by hand.</li>
+    </ul>
+  </section>
+
+  <!-- A2 OPTIONS -->
+  <section class="phase" id="options">
+
+    <h3>Four directions, and why we picked one</h3>
+    <p>I wrote these up as separate solution cards so the team could argue about them on their merits. Engineers, the head of design and the co-founder all pushed back in the threads, and the decision came out of that discussion.</p>
+    <div class="opts">
+    <details class="opt" id="opt-a">
+      <summary><span class="badge b-rej">Not pursued</span><span class="opt-title">A · A suggestions pop-up</span><span class="caret" aria-hidden="true">▼</span></summary>
+      <div class="opt-body">
+    <p>After a few items, a lightbulb appears. It opens a panel of suggested questions “based on your topic”, which the teacher can add or regenerate.</p>
+    <div class="steps pros">
+      <div class="step"><div class="k">For</div><div class="v">Lets teachers preview ideas before anything lands in their activity.</div></div>
+      <div class="step"><div class="k">Against</div><div class="v">It's one more surface to notice, open and read. Our research showed that passive suggestions mostly get ignored, and suggestions that are only text still leave the teacher to write the answers.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-option-popup.webp" alt="Exploration: a Content Suggestions pop-up listing suggested quiz questions with a Generate More button" data-ph="Option A — suggestions pop-up" onerror="phFail(this)">
+      </div>
+    </details>
+    <details class="opt" id="opt-b">
+      <summary><span class="badge b-ship">Shipped</span><span class="opt-title">B · An inline “Generate similar” button</span><span class="caret" aria-hidden="true">▼</span></summary>
+      <div class="opt-body">
+    <p>A button sits next to “Add an item”. One click adds a complete new item (question, answers and correct flags) in the same format and on the same topic as the items already there.</p>
+    <div class="steps pros">
+      <div class="step"><div class="k">For</div><div class="v">It's placed where the teacher's next action already is, and the result is an ordinary item they can edit or delete. It covers questions and answers together, works on every template the existing AI supported, and reused that backend, so engineering estimated it at about two days.</div></div>
+      <div class="step"><div class="k">Against</div><div class="v">It adds one item at a time and needs some content first, so it doesn't help a teacher facing a blank page. We accepted that because the existing modal already covers that case.</div></div>
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-option-inline.webp" alt="Exploration: Add similar (AI) button placed next to Add an item under three quiz questions" data-ph="Option B — inline button" onerror="phFail(this)">
+      </div>
+    </details>
+    <details class="opt" id="opt-c">
+      <summary><span class="badge b-kept">On hold</span><span class="opt-title">C · “Fix my answers” for Quiz</span><span class="caret" aria-hidden="true">▼</span></summary>
+      <div class="opt-body">
+    <p>This direction came out of the correct-answer findings. I proposed three versions: a nudge to mark answers, a button to generate or fix them, and AI setting correct answers automatically when the teacher clicks Done.</p>
+    <div class="steps pros">
+      <div class="step"><div class="k">For</div><div class="v">It goes straight at a validation error we saw in every study.</div></div>
+      <div class="step"><div class="k">Against</div><div class="v">An engineer pointed out that silent auto-fixing edits the activity on the user's behalf. If it gets one answer wrong, people stop trusting the feature, and because it's invisible, nobody learns it exists. The co-founder added that it overlapped heavily with option B. We parked it, kept the principle that AI changes should stay visible and reviewable, and advanced B first.</div></div>
+    </div>
+      </div>
+    </details>
+    <details class="opt" id="opt-d">
+      <summary><span class="badge b-rej">Later</span><span class="opt-title">D · A chat assistant in the editor</span><span class="caret" aria-hidden="true">▼</span></summary>
+      <div class="opt-body">
+    <p>This was a broader “editor genie” you could ask to generate more, fix typos, change difficulty or add audio to every item.</p>
+    <div class="steps pros">
+      <div class="step"><div class="k">For</div><div class="v">It's the most flexible option and matches what people now expect from AI tools.</div></div>
+      <div class="step"><div class="k">Against</div><div class="v">It was the biggest bet, and research showed that separate AI surfaces pull people away from their own content. We wanted to learn whether in-editor help gets used at all before building a whole interface around it.</div></div>
+    </div>
+      </div>
+    </details>
+    </div>
+  </section>
+  <!-- A3 SHAPING -->
+  <section class="phase" id="shaping">
+
+    <h3>The smaller trade-offs that made it work</h3>
+    <p>Once we'd picked a direction, most of the design work was in the details, each of them a small decision with a cost:</p>
+    <div class="steps">
+      <div class="step"><div class="k">One per click</div><div class="v">Each click adds one item. It's predictable, quick to review and cheap. Batch generation was left until the usability results came in.</div></div>
+      <div class="step"><div class="k">Unlock threshold</div><div class="v">The AI needs a pattern to follow, so the button stays disabled until there are enough text items. A tooltip explains why. The threshold sits behind a numeric feature switch (zero hides the feature), so we could tune it from data rather than guess.</div></div>
+      <div class="step"><div class="k">Same shape</div><div class="v">Quiz output follows the teacher's own structure: the number of answers stays within the range of their existing questions.</div></div>
+      <div class="step"><div class="k">Speed vs. cost</div><div class="v">We used a small, fast model with no caching to start, and reviewed latency and cost once the build was live. A loading state on the button and in the new item shows that something is happening.</div></div>
+      <div class="step"><div class="k">Stay in control</div><div class="v">Nothing changes without the teacher seeing it. New content appears in the editor like any other item, never silently on save. That came directly from the option C discussion.</div></div>
+      <div class="step"><div class="k">Honest errors</div><div class="v">Inline messages cover unsupported content (images) and failed responses, with wording aligned with the existing AI feature.</div></div>
+    
+    </div>
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-states.webp" alt="Four states: disabled with tooltip, loading item placeholder, unsupported images error, failed response error" data-ph="States — disabled, loading, errors" onerror="phFail(this)">
+    <img class="shot" loading="lazy" decoding="async" src="images/ai-mobile.webp" alt="Mobile editor: Generate similar disabled, enabled with bilingual content, and with an error" data-ph="Mobile — disabled, enabled, error" onerror="phFail(this)">
+   
+  </section>
+
+  <!-- A4 MEASUREMENT -->
+  <section class="phase" id="measure">
+
+    <h3>Designing how we'd know</h3>
+    <p>I wanted the A/B test to tell us more than “people clicked it”. Together with product analyst, I specified the events and goals in a developer brief:</p>
+    <ul class="feat one">
+      <li><b>How much AI went into an activity:</b> a count of assists saved with every created activity.</li>
+      <li><b>Whether assisted teachers finish:</b> editor completion and creations, measured separately for sessions where the assist was used.</li>
+      <li><b>Whether it works reliably:</b> server-side success and failure events, with generation time recorded.</li>
+      <li><b>A clear definition of “used”:</b> an assist only counts once an item has actually been added, not on the click.</li>
+    </ul>
+    <div class="result neutral">
+      <span class="tag">A/B TEST</span>
+      <span class="val">Triggered at sign-up · goals: net subscriptions, creations, AI-assisted creations</span>
+    </div>
+  </section>
+
+  <!-- A5 LANGUAGE QA -->
+  <section class="phase" id="language">
+
+    <h3>What broke outside English, and how we chose a fix</h3>
+    <p>Before release I tested the build the way our non-English users create: Ukrainian quizzes, and Polish–English and Spanish–English vocabulary sets. When the activity kept its default “Untitled” name, output drifted. The UX researcher's usability sessions showed most testers never named their activity.</p> 
+    <p>To decide whether the problem was big enough to block release, I checked real data rather than the test sessions. In September only 2.3–3.1% of new activities in the UK, US, Ukraine and Poland were left untitled. Real teachers name their activities, even though testers didn't, so we went ahead.</p>
+  </section>
+
+  <!-- ================= R · RESULT ================= -->
+  <section class="band" id="result">
+
+    <h2>Outcome &amp; takeaways</h2>
+    <div class="sum-grid">
+      <div>
+        <h4>What shipped</h4>
+        <ul>
+          <li>“Generate similar” on desktop and mobile, across the templates supported by the existing AI.</li>
+          <li>Released behind a feature switch as an A/B test, which showed +2.5% creations among paid users.</li>
+          <li>Analytics events and goals we could reuse for later AI features.</li>
+          <li>Follow-up cards for auto-titles and fixing Quiz answers.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>What I'd carry forward</h4>
+        <ul>
+          
+          <li>Put AI where the user’s next action already is, and never let it change content silently.</li>
+          <li>Weigh overlapping AI ideas side by side, not one card at a time. Choosing what to build first mattered as much as how to design it.</li>
+          <li>Test in your users’ languages, and check real usage data before adding UI to fix an edge case. Here it showed a warning wasn’t needed.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFLECTION -->
+  <section class="reflect">
+    <h2>The throughline</h2>
+    <p>AI features are easy to add and easy to ignore. What made this one useful wasn’t the model. It was where it lived: next to the button teachers were already about to press, producing content they could see and edit.</p>
+  </section>
+
+</main>
+
+<section class="wrap next-nav">
+  <div class="next">
+    <span class="lbl">Next case</span>
+    <a class="proj" href="case-billing.html">Billing portal for a SaaS platform →</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot">
+    <h3>Want to work together?</h3>
+    <p class="sub">Open to senior product design roles. Get in touch.</p>
+    <div class="foot-meta">
+      <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 7 10-7"></path></svg></span>
+        Email
+      </a>
+      <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></span>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function phFail(img){var d=document.createElement("div");d.className="ph";if(img.dataset.style)d.setAttribute("style",img.dataset.style);d.textContent=img.dataset.ph||"";img.replaceWith(d);}
+</script>
+
+</body>
+</html>
