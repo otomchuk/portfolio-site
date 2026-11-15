@@ -6,7 +6,7 @@
 <title>Side projects — Olena Tomchuk</title>
 <meta name="description" content="What I build when no one's briefing me — a podcast, the Cycle Calendar Chrome extension, and vzir.shop.">
 <link rel="canonical" href="https://olenatomchuk.com/side-projects.html">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Olena Tomchuk">
 <meta property="og:url" content="https://olenatomchuk.com/side-projects.html">
@@ -19,12 +19,13 @@
 <meta name="twitter:image" content="https://olenatomchuk.com/images/og-cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('js-anim');</script>
 <script src="app.js" defer></script>
 </head>
 <body class="p-side">
+<a class="skip" href="#top">Skip to content</a>
 
 <nav class="nav">
   <div class="nav-in">
@@ -95,28 +96,22 @@
     <div class="carousel wide" aria-roledescription="carousel" aria-label="Cycle Calendar screens">
       <div class="carousel-track" id="cycle-track" tabindex="0">
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/cycle-1.webp" alt="Cycle Calendar — colour-coded phases in Google Calendar"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/cycle-1.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-1.webp" alt="Cycle Calendar — colour-coded phases in Google Calendar" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/cycle-2.webp" alt="Cycle Calendar — phase event detail"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/cycle-2.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-2.webp" alt="Cycle Calendar — phase event detail" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/cycle-3.webp" alt="Cycle Calendar — extension and setup"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/cycle-3.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/cycle-3.webp" alt="Cycle Calendar — extension and setup" onerror="phFail(this)">
         </div>
       </div>
       <div class="carousel-foot">
         <div class="carousel-nav">
           <button type="button" data-dir="-1" aria-label="Previous image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
           </button>
           <button type="button" data-dir="1" aria-label="Next image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
           </button>
         </div>
       </div>
@@ -154,48 +149,34 @@
     <div class="carousel media" aria-roledescription="carousel" aria-label="Podcast brand visuals">
       <div class="carousel-track" id="podcast-track" tabindex="0">
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-1.webp" alt="Podcast brand visual 1"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-1.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-1.webp" alt="Podcast brand visual 1" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-2.webp" alt="Podcast brand visual 2"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-2.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-2.webp" alt="Podcast brand visual 2" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-3.webp" alt="Podcast brand visual 3"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-3.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-3.webp" alt="Podcast brand visual 3" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-4.webp" alt="Podcast brand visual 4"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-4.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-4.webp" alt="Podcast brand visual 4" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-5.webp" alt="Podcast brand visual 5"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-5.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-5.webp" alt="Podcast brand visual 5" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-6.webp" alt="Podcast brand visual 6"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-6.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-6.webp" alt="Podcast brand visual 6" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/podcast-7.webp" alt="Podcast brand visual 7"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/podcast-7.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/podcast-7.webp" alt="Podcast brand visual 7" onerror="phFail(this)">
         </div>
       </div>
       <div class="carousel-foot">
         <div class="carousel-nav">
           <button type="button" data-dir="-1" aria-label="Previous image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
           </button>
           <button type="button" data-dir="1" aria-label="Next image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
           </button>
         </div>
       </div>
@@ -226,43 +207,31 @@
       <div class="carousel-track" id="vzir-track" tabindex="0">
        
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-1.webp" alt="Vzir block-printed textile — image 1"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-1.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-1.webp" alt="Vzir block-printed textile — image 1" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-2.webp" alt="Vzir block-printed textile — image 2"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-2.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-2.webp" alt="Vzir block-printed textile — image 2" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-3.webp" alt="Vzir block-printed textile — image 3"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-3.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-3.webp" alt="Vzir block-printed textile — image 3" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-4.webp" alt="Vzir block-printed textile — image 4"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-4.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-4.webp" alt="Vzir block-printed textile — image 4" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-5.webp" alt="Vzir block-printed textile — image 5"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-5.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-5.webp" alt="Vzir block-printed textile — image 5" onerror="phFail(this)">
         </div>
         <div class="slide">
-          <img class="shot" loading="lazy" decoding="async" src="images/vzir-6.webp" alt="Vzir block-printed textile — image 6"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ph" style="display:none">images/vzir-6.webp</div>
+          <img class="shot" loading="lazy" decoding="async" src="images/vzir-6.webp" alt="Vzir block-printed textile — image 6" onerror="phFail(this)">
         </div>
       </div>
       <div class="carousel-foot">
         <div class="carousel-nav">
           <button type="button" data-dir="-1" aria-label="Previous image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
           </button>
           <button type="button" data-dir="1" aria-label="Next image">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            <svg width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
           </button>
         </div>
       </div>
@@ -275,16 +244,20 @@
 <footer id="contact">
   <div class="foot">
     <h3>Want to work together?</h3>
-    <p class="sub">Open to Senior Product Design or Product Management roles. Get in touch.</p>
+    <p class="sub">Open to product management and senior product design roles. Get in touch.</p>
     <div class="foot-meta">
       <a class="foot-link" href="mailto:olenka.tomchuk@gmail.com">
-        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg></span>
         Email
       </a>
       <a class="foot-link" href="https://www.linkedin.com/in/olenatomchuk/">
-        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        <span class="foot-icon" aria-hidden="true"><svg width="20" height="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg></span>
         LinkedIn
       </a>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 Olena Tomchuk · Lviv, Ukraine</span>
+      <span>Visits are counted with Cloudflare Web Analytics, which sets no cookies.</span>
     </div>
   </div>
 </footer>
@@ -292,7 +265,7 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
   <button class="lightbox-close" type="button" aria-label="Close">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    <svg width="20" height="20" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
   </button>
   <img id="lightbox-img" src="" alt="">
 </div>
@@ -326,6 +299,9 @@
       });
     });
   });
+</script>
+<script>
+function phFail(img){var d=document.createElement("div");d.className="ph";if(img.dataset.style)d.setAttribute("style",img.dataset.style);d.textContent=img.dataset.ph||"";img.replaceWith(d);}
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1c9850e645a947d5b9592e34150a630b"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
