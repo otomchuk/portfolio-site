@@ -4,12 +4,16 @@
 (function () {
   'use strict';
 
-  // ---- Nav shadow on scroll (runs regardless of motion preference) ----
+  // ---- Nav shadow once the page has scrolled (IntersectionObserver, no scroll listener) ----
   var nav = document.querySelector('.nav');
-  if (nav) {
-    var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+  if (nav && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none';
+    document.body.prepend(sentinel);
+    new IntersectionObserver(function (entries) {
+      nav.classList.toggle('scrolled', !entries[0].isIntersecting);
+    }).observe(sentinel);
   }
 
   var motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -35,7 +39,12 @@
   if ('IntersectionObserver' in window) {
     var ro = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); }
+        if (e.isIntersecting) {
+          var el = e.target;
+          el.classList.add('is-in'); ro.unobserve(el);
+          // drop the stagger delay after the reveal so hover states respond instantly
+          setTimeout(function () { el.style.transitionDelay = ''; }, 1200);
+        }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     revealEls.forEach(function (el) { ro.observe(el); });
